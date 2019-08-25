@@ -56,7 +56,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section id="frontpage">
-				<h1>pygeoapi <img src="static/geopython.png" style="vertical-align: middle;"/></h1>
+				<h1 style="background-color:white"><img src="../static/pygeoapi-logo-notrans.png" style="vertical-align: middle;"/></h1>
 				<h2>An OGC API to geospatial data</h2>
 				<p><a href="https://pygeoapi.io">https://pygeoapi.io</a></p>
 			</section>
@@ -77,7 +77,7 @@
 			</section>
 			<section id="geospatial-api-evolution">
 				<section>
-					<h1>Geospatial API revolution</h1>
+					<h1>Geospatial API evolution</h1>
 				</section>
 				<section>
 					<h1>1990s</h1>
@@ -168,8 +168,44 @@
 					<h1>OpenAPI</h1>
 					<ul>
 						<li>Specification on how to describe a REST API</li>
-						<li>Originally referred to as Swagger</li>
+						<li>Defines endpoints, request parameters, response</li>
 						<li>Programming language agnostic</li>
+						<li>Formerly Swagger</li>
+					</ul>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						```json
+						"info": {
+							"contact": {
+								"email": "you@example.org",
+								"name": "pygeoapi Development Team",
+								"url": "https://pygeoapi.io"
+							},
+							"description": "pygeoapi provides an API to geospatial data",
+							"license": {
+								"name": "CC-BY 4.0 license",
+								"url": "https://creativecommons.org/licenses/by/4.0/"
+							},
+							"termsOfService": "None",
+							"title": "pygeoapi Demo instance - running latest GitHub version",
+							"version": "3.0.2",
+							"x-keywords": [
+								"geospatial",
+								"data",
+								"api"
+							]
+						},
+						"openapi": "3.0.2",
+						```
+					</textarea>
+				</section>
+				<section>
+					<h1>Swagger</h1>
+					<ul>
+						<li>OpenAPI client tooling</li>
+						<li>Robust, web developer focused</li>
+						<li>Automated documentation, testing, code generation</li>
 					</ul>
 				</section>
 				<section data-markdown>
@@ -183,112 +219,74 @@
 					**MUST READ DOCUMENT**
 					</textarea>
 				</section>
-
-			</section> <!--  End of REST -->
-
-			<!--  Start of Hackathon -->
-			<section id="hackathon"> 
+			</section>
+			<section id="ogc-activity">
 				<section>
-				<h2>III. Kickstarting WFS 3.0</h2>
+					<h1>OGC activity</h1>
 				</section>
-				
-			<section>
-				<h3>WFS 3.0 Hackathon</h3>
-				<ul>
-					<li>March 2018 - <a href="http://www.opengeospatial.org/event/180306hackaton">Fort Collins, CO, USA</a></li>
-					<li>OGC-sponsored</li>
-					<li>Develop WFS 3.0 based on Swagger/OpenAPI (v3) </li>
-					<li>Write specification using GitHub</li>
-					<li>First implementations</li>
-					<li><strong>pygeoapi was born on Valentine 2018!</strong></li>
-				</ul>
-			</section>
-			<section>
-			<img src="static/Hackathon1.jpg"/>
-			</section>
-			<section>
-			<img src="static/Hackathon2.jpg"/>
-			</section>
-			<section>
-			<img src="static/Hackathon3.jpg"/>
-			</section>
-			<section data-markdown>
-			<textarea data-template>
-				![alt text](https:///pygeoapi.io/presentation/static/Jivan_Amara.png "Jivan Amara") <!-- .element: style="background-color: white;"  -->
-				
-				Matthew Douglas Wiggett aka Jivan Amara
-				
-				1975 - 2018
-				
-				(Go-lang client/server for WFS3.0)
-			</textarea>
-			</section>
-			</section> <!--  End Hackathon -->
-
-			<!--  Start OpenAPI -->
-			<section id="openapi">
 				<section>
-				<h2>IV. OpenAPI / Swagger</h2>
+					<h1>W3C Spatial Data on the Web Best Practices (2017)</h1>
+					<ul>
+						<li>Recommendations on formats, identifiers, access, licensing, provenance</li>
+						<li>Being webby</li>
+					</ul>
 				</section>
-				<!-- Open API explanation -->
-				<section data-markdown>
-					<textarea data-template>
-						## OpenAPI / Swagger
-						- Specification on how to describe a REST web service
-						- Originally was referred as Swagger 
-						- Language agnostic
-						</textarea>
+				<section>
+					<h1>Design patterns</h1>
+					<ul>
+						<li>Being webby</li>
+						<li>Removing HTTP use as a tunnel
+							<ul>
+								<li><strike>/ows?request=GetFeature&typename=roads&featureid=5</strike></li>
+								<li>/api/collections/roads/items/5</li>
+							</ul>
+						</li>
+						<li>
+							Modular specification development
+							<ul>
+								<li>Core and extensions</li>
+							</ul>
+						</li>
+					</ul>
 				</section>
-				<section
-					fullscreen-img="static/SwaggerAPI.png" fullscreen-size="contain">
-					<a href="http://swagger.io" style="background-color: #101010" target="_blank">http://swagger.io</a>
+				<section>
+					<h1>Timeline</h1>
+					<ul>
+						<li>2017: W3C Spatial Data on the Web Best Practices</li>
+						<li>2017: OGC API Whitepaper</li>
+						<li>2018: WFS3 Hackathon, Weather on the Web API Hackathon</li>
+						<li>2019: OGC API Hackathon</li>
+					</ul>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-					![alt text](static/swagger.png "Swagger header")
-					   
-					   - OpenAPI is based on YAML Syntax
-					   - Describes REST endpoints
-					   - HTTP Verbs to use
-					   - Format of Responses
-				   </textarea>
+				<section>
+					<h1>Future OGC standards</h1>
+					<ul>
+						<li>OGC API - Common (OWS Common)</li>
+						<li>OGC API - Features (WFS)</li>
+						<li>OGC API - Coverages (WCS)</li>
+						<li>OGC API - Maps and Tiles (WMS/WMTS)</li>
+						<li>OGC API - Processing (WPS)</li>
+						<li>OGC API - Records (CSW)</li>
+					</ul>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-					   Example yaml
-```yaml
-openapi: 3.0.1
-info:
-   title: OGC Web Feature Service standard API
-   version: 0.0.1
-   description: 'This is a sample OpenAPI definition for OGC'
-   contact:
-   name: La oreja de van Gogh
-```				   
-</textarea>
+				<section>
+					<h1>OGC activity on GitHub</h1>
+					<ul>
+						<li>webby</li>
+						<li>Specification development</li>
+						<li>Issue tracking/discussion/collaboration</li>
+						<li>Standards written in AsciiDoc (!)</li>
+						<li>Standards released as HTML (!) or traditional PDF/etc.</li>
+					</ul>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
+			</section>
+			<section id="pygeoapi">
+				<section>
+					<h1>Say hello to pygeoapi</h1>
+				</section>
+			</section>
+
 			   
-```yaml
-paths:
-	  /:
-	   get:
-		summary: landing page of this API
-		description: 'Description of dataset'
-		operationId: getLandingPage
-		tags:
-		- Capabilities
-responses:
-	  '200':
-		description: links to the API capabilities
-		content:
-		 - application/json:
-``` 		   
-	</textarea>
-				</section>
-			</section><!--  end of Open API -->
-
 			<!--  Start Spec -->
 			<section id="spec">
 				<section>
