@@ -208,17 +208,6 @@
 						<li>Automated documentation, testing, code generation</li>
 					</ul>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-					### OGC and W3C
-
-					![alt text](static/W3C_OGC.png "W3C and OFG")
-
-					[https://www.w3.org/TR/sdw-bp/](https://www.w3.org/TR/sdw-bp/) <!-- .element: target="_blank" -->
-
-					**MUST READ DOCUMENT**
-					</textarea>
-				</section>
 			</section>
 			<section id="ogc-activity">
 				<section>
@@ -229,6 +218,7 @@
 					<ul>
 						<li>Recommendations on formats, identifiers, access, licensing, provenance</li>
 						<li>Being webby</li>
+						<li>https://www.w3.org/TR/sdw-bp/</li>
 					</ul>
 				</section>
 				<section>
@@ -277,123 +267,50 @@
 						<li>Issue tracking/discussion/collaboration</li>
 						<li>Standards written in AsciiDoc (!)</li>
 						<li>Standards released as HTML (!) or traditional PDF/etc.</li>
+						<li>Gitter chat</li>
 					</ul>
 				</section>
 			</section>
 			<section id="pygeoapi">
 				<section>
 					<h1>Say hello to pygeoapi</h1>
-				</section>
-			</section>
-
-			   
-			<!--  Start Spec -->
-			<section id="spec">
-				<section>
-				<h2>V. The WFS 3.0 Spec</h2>
-					<p>
-						NB: renamed as: <strong>"OGC API - Features"</strong>
-					</p>
-				</section>
-			
-			<section>
-				<h2>Spec</h2>
-
-				<p>
-					<a href="https://github.com/opengeospatial/WFS_FES" target="_blanc">github.com/opengeospatial/WFS_FES</a>
-				</p>
-	
-				<p>Maintained in GitHub</p>
-	
-			</section>
-			<section>
-				<small>By C. Portele - <a href="https://github.com/opengeospatial/OGC-API-Hackathon-2019/tree/master/Presentations" target="_blanc">link</a></small>
-					<img src="static/oaf-spec-urls.png" style="background: white; border-radius: 10px"/>
-			</section>
-
-			<section>
-				<img src="static/EndPoints.png" />
-				
-				<a href="https://app.swaggerhub.com/apis/cholmesgeo/WFS3/M1" target="_blank">Check it in SwaggerHub</a>
-			</section>
-
-
-			<section>
-				<h2>Example</h2>
-				<pre>
-	/collections
-
-	/collections/countries
-
-	/collections/countries/items
-
-	/collections/countries/items/The_Netherlands
-					
-				</pre>
-				<p>Data is structured and each Feature is a REST representation</p>
-			</section>
-
-			<section>
-				<h2>OGC API - Features</h2>
-				<h3>Links</h3>
-				<ul>
-					<li><a href="https://github.com/opengeospatial/WFS_FES" target="_blank">GitHub Repository</a></li>
-					<li><a href="https://github.com/opengeospatial/WFS_FES/tree/master/core/openapi/schemas" target="_blank">OpenAPI Schemas</a></li>
-					<li><a href="http://docs.opengeospatial.org/DRAFTS/17-069.html" target="_blank">Draft 17-069.html</a></li>
-					<li><a href="https://gitter.im/opengeospatial/WFS_FES" target="_blank">Gitter Chat</a></li>
-					<li><a href="https://github.com/opengeospatial/OGC-API-Hackathon-2019" target="_blanc">OGC-API-Hackathon-2019</a></li>
-				</ul>
-			</section>
-
-			</section><!--  end of Spec -->
-
-			<!-- Start of pygeoapi -->
-			<section id="pygeoapi">
-				<section>
-				<h2>VI. pygeoapi</h2>
-				</section>
-				<section>
-					<!--  First slide -->
-					<h2>pygeoapi</h2>
-					<img src="static/geopython.png" alt="geopython site">
-					<p>Part of the amazing Geopython community in GitHub</p>
-					<p>
-						<a href="https://geopython.github.io/" target="_blank">geopython.github.io</a>
-					</p>
-				</section>
-				
-				<section>
-					<a href="https://geopython.github.io/" target="_blank"><img src="static/geopython.github.io.png" alt="geopython.github.io" style="background: white; border-radius: 10px"/></a>
-				</section>
-
-				<section>
-					<h3>pygeoapi</h3>
+					<h1 style="background-color:white"><img src="../static/pygeoapi-logo-notrans.png" style="vertical-align: middle;"/></h1>
 					<ul>
-						<li>A geospatial API framework - more than just a WFS v3 implementation </li>
+						<li><a href="https://geopython.github.io" target="_blank"><img width="60" height="60" src="static/geopython.png" alt="geopython.github.io" style="background: white; border-radius: 10px"/></a> A <a href="https://geopython.github.io">Geopython</a> project</li>
+						<li>Created in 2018 on Valentines Day ❤️ </li>
+					</ul>
+				</section>
+				<section>
+					<h1>Project Overview</h1>
+					<ul>
+						<li>Geospatial data API framework</li>
 						<li>OGC Compliant (already!)</li>
-						<li>Access geospatial data via OGC APIs </li>
-						<li>OSGeo Community Project (in Motion) </li>
-						<li>Powered (default) by:</li>
+						<li>OSGeo Community Project</li>
+						<li>International team (Canada, Netherlands, Greece)
+						<li>International team (Canada, Netherlands, Greece)
+							<ul>
+								<li>13 core contributors</li>
+								<li>21000 upstream contributors (dependencies)</li>
+							</ul>
+						</li>
 					</ul>
-					<img src="static/flask.png" alt="flask img" style="background: white; border-radius: 10px"/>
 				</section>
-
 				<section>
-					<h3>pygeoapi - technical</h3>
+					<h1>Technical Overview</h1>
 					<ul>
-						<li>Flask with REST support</li>
-						<li>OpenAPI endpoint automatically generated </li>
-						<li>Data provider agnostic (plugins)</li>
-						<li>Docker Images</li>
+						<li>Core abstract API; web framework agnostic (default Flask)</li>
+						<li>YAML configuration (metadata, dataset connections</li>
+						<li>Automated OpenAPI document generation (data binding)</li>
+						<li>Robust plugin framework (data connections, formats, processing)</li>
+						<li>Easy deployment (pip install, Docker)</li>
+						<li>Minimal dependencies</li>
 					</ul>
 				</section>
-
 				<section>
 					<img src="static/pygeoapi-arch1.png" style="background: white; border-radius: 10px"/>
 				</section>
-
 				<section>
-					<h2>Data Providers</h2>
+					<h1>Data Providers</h1>
 					<table>
 						<tbody>
 							<tr>
@@ -410,32 +327,16 @@
 							</tr>
 						</tbody>
 					</table>
-					<p>
-						* also via GDAL-OGR Provider
-					</p>
+					<p>* also via GDAL-OGR Provider</p>
 				</section>
 				<section>
-					<h2>Data Providers - Cont</h2>
-					<table>
-						<tbody>
-							<tr>
-								<td><img src="static/gdal.png" /></td>
-							</tr>
-							<tr>
-								<td align="center">GDAL-OGR</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Data Providers - GDAL-OGR</h2>
+					<h2>Data Providers - GDAL/OGR</h2>
+					<img src="static/gdal.png" />
 					<ul>
-						<li>via OGR-Python bindings</li>
-						<li>in theory <a href="https://gdal.org/drivers/vector/" target="_blank">~100 Vector Formats!</a></li>
-						<li>thus: WFS2, GeoPackage, Shapefile, GeoJSON, PostGIS, ...</li>
-						<li>paging, reprojection, bbox/attr/id-query, auth</li>
-						<li>==> unlock existing WFS2s!</li>
+						<li>Via OGR-Python bindings</li>
+						<li>Unleashes <a href="https://gdal.org/drivers/vector/" target="_blank">~100 Vector Formats!</a> (WFS 1/2, GeoPackage, Shapefile, GeoJSON, PostGIS, ...)</li>
+						<li>Paging, reprojection, spatial/attribute query</li>
+						<li>==> unlock existing WFS 1/2s!</li>
 					</ul>
 				</section>
 				<section>
@@ -444,6 +345,7 @@
 					</p>
 					<img src="static/pygeoapi.io.png" alt="image pygeoapi site"/>
 				</section>
+			</section>
 				<section>
 					<h3>Demo</h3>
 					<p>
